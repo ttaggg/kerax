@@ -1,0 +1,41 @@
+package(default_visibility = ["//visibility:public"])
+
+py_library(
+    name = "model_hub",
+    srcs = [":model_hub.py"],
+    deps = [
+        ":fc_densenet",
+        ":unet",
+    ],
+)
+
+py_library(
+    name = "fc_densenet",
+    srcs = [":fc_densenet.py"],
+    deps = [
+        ":fcd_blocks"
+    ],
+)
+
+py_library(
+    name = "fcd_blocks",
+    srcs = [":fcd_blocks.py"],
+    deps = [
+    ],
+)
+
+py_library(
+    name = "unet",
+    srcs = [":unet.py"],
+    deps = [
+        ":unet_blocks"
+    ],
+)
+
+py_library(
+    name = "unet_blocks",
+    srcs = [":unet_blocks.py"],
+    deps = [
+    ],
+)
+

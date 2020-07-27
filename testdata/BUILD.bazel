@@ -1,0 +1,20 @@
+package(default_visibility = ["//visibility:public"])
+
+filegroup(
+    name = "severstal/images",
+    srcs = glob(["severstal/images/*.jpg"]),
+    visibility = ["//visibility:public"],
+)
+
+filegroup(
+    name = "cityscapes/images",
+    srcs = glob(["cityscapes/images/**/*.png"]),
+    visibility = ["//visibility:public"],
+)
+
+exports_files([
+    "chpt.01.hdf5",
+    "minimal_config.py",
+    "maximal_config.py",
+    "severstal/test_set.csv",
+])

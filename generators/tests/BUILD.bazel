@@ -1,0 +1,37 @@
+package(default_visibility = ["//visibility:public"])
+
+
+py_test(
+    name = "cityscapes_generator_test",
+    srcs = [":cityscapes_generator_test.py"],
+    data = [
+        "//testdata:cityscapes/images"
+        ],
+    deps = [
+        "//loaders:cityscapes_data_loader",
+    ],
+)
+
+py_test(
+    name = "generator_test",
+    srcs = [":generator_test.py"],
+    data = [
+        "//testdata:severstal/test_set.csv",
+        "//testdata:severstal/images"
+        ],
+    deps = [
+        "//loaders:severstal_data_loader",
+    ],
+)
+
+py_test(
+    name = "severstal_generator_test",
+    srcs = [":severstal_generator_test.py"],
+    data = [
+        "//testdata:severstal/test_set.csv",
+        "//testdata:severstal/images"
+        ],
+    deps = [
+        "//loaders:severstal_data_loader",
+    ],
+)

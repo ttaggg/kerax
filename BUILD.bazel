@@ -1,0 +1,28 @@
+package(default_visibility = ["//visibility:public"])
+
+py_binary(
+    name = "train",
+    srcs = [":train.py"],
+    deps = [
+        ":flags",
+        "//models:model_hub",
+        "//utils:general_utils",
+    ],
+)
+
+py_binary(
+    name = "predict",
+    srcs = [":predict.py"],
+    deps = [
+        ":flags",
+        "//utils:general_utils",
+    ],
+)
+
+
+py_library(
+    name = "flags",
+    srcs = [":flags.py"],
+    deps = [
+    ],
+)
