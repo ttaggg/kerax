@@ -1,0 +1,25 @@
+package(default_visibility = ["//visibility:public"])
+
+
+py_test(
+    name = "cityscapes_data_loader_test",
+    srcs = [":cityscapes_data_loader_test.py"],
+    data = [
+        "//testdata:cityscapes/images"
+        ],
+    deps = [
+        "//loaders:cityscapes_data_loader",
+    ],
+)
+
+
+py_test(
+    name = "severstal_data_loader_test",
+    srcs = [":severstal_data_loader_test.py"],
+    data = [
+        "//testdata:severstal/test_set.csv"
+        ],
+    deps = [
+        "//loaders:severstal_data_loader",
+    ],
+)

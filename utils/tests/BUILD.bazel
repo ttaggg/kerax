@@ -1,0 +1,44 @@
+package(default_visibility = ["//visibility:public"])
+
+
+py_test(
+    name = "general_utils_test",
+    srcs = [":general_utils_test.py"],
+    data = [
+        "//testdata:chpt.01.hdf5",
+        "//testdata:minimal_config.py",
+        "//testdata:maximal_config.py"
+        ],
+    deps = [
+        "//utils:general_utils",
+    ],
+)
+
+py_test(
+    name = "image_utils_test",
+    srcs = [":image_utils_test.py"],
+    data = [],
+    deps = [
+        "//utils:image_utils",
+    ],
+)
+
+py_test(
+    name = "losses_test",
+    srcs = [":losses_test.py"],
+    data = [],
+    deps = [
+        "//utils:losses",
+    ],
+)
+
+
+py_test(
+    name = "metrics_test",
+    srcs = [":metrics_test.py"],
+    data = [],
+    deps = [
+        "//utils:metrics",
+    ],
+)
+
