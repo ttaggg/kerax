@@ -3,12 +3,9 @@
 *kerax* is small and portable pipeline for image segmentation and classification written in Keras. Main features are simplicity of usage and adding your own data, as well as re-usability of the code and flexibility (several optimizers, loss functions, metrics, custom callbacks for tensorboard and models). Custom models (FC-Densenet, UNet) can be used easily in other projects, as well as custom callbacks for training / validation. Directories `models`, `loaders`, `generators`,`utils` contain README file with brief description.
 
 
-<p float="left">
-  <img src="./testdata/example_ground.png" width="300" />
-  <img src="./testdata/example_image.png" width="300" />
-  <img src="./testdata/example_prediction.png" width="300" />
+<p align="center">
+  <img src="./testdata/example.png" width="400" />
 </p>
-
 
 ## Requirements
 * Tested with:
