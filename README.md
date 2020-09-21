@@ -23,7 +23,7 @@
 
 #### Training
 ```bash
-python train.py \
+python -m kerax.train \
     --output_dir <path/to/output_dir> \
     --config <path/to/config.py>
 ```
@@ -37,7 +37,7 @@ bazel run //:train -- \
 
 #### Prediction
 ```bash
-python predict.py \
+python -m kerax.predict \
     --output_dir <path/to/output_dir> \
     --config <path/to/config.py> \
     --load_saved_model <path/to/checkpoint.hdf5>
