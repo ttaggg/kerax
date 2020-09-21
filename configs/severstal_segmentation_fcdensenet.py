@@ -42,6 +42,7 @@ training = {
 
 data = {
     'data_path': '<path/to/dir/with/csv_and_images>',
+    'labels_path': '<path/to/dir/with/csv_and_images>',
     'task': 'severstal_segmentation',
     'n_folds': 20,
     'fold': 0,

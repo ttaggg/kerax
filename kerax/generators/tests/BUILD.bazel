@@ -1,0 +1,25 @@
+package(default_visibility = ["//visibility:public"])
+
+
+py_test(
+    name = "cityscapes_generator_test",
+    srcs = [":cityscapes_generator_test.py"],
+    data = [
+        "//kerax/testdata:cityscapes/images"
+        ],
+    deps = [
+        "//kerax/loaders:cityscapes_data_loader",
+    ],
+)
+
+py_test(
+    name = "severstal_generator_test",
+    srcs = [":severstal_generator_test.py"],
+    data = [
+        "//kerax/testdata:severstal/test_set.csv",
+        "//kerax/testdata:severstal/images"
+        ],
+    deps = [
+        "//kerax/loaders:severstal_data_loader",
+    ],
+)

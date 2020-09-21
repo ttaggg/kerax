@@ -1,0 +1,44 @@
+package(default_visibility = ["//visibility:public"])
+
+py_library(
+    name = "general_utils",
+    srcs = [":general_utils.py"],
+    deps = [
+        ":callbacks",
+        ":image_utils",
+        ":losses",
+        ":metrics",
+        "//kerax/loaders:cityscapes_data_loader",
+        "//kerax/loaders:mauto_data_loader",
+        "//kerax/loaders:severstal_data_loader",
+    ],
+)
+
+py_library(
+    name = "callbacks",
+    srcs = [":callbacks.py"],
+    deps = [
+        ":image_utils",
+    ],
+)
+
+py_library(
+    name = "image_utils",
+    srcs = [":image_utils.py"],
+    deps = [
+    ],
+)
+
+py_library(
+    name = "losses",
+    srcs = [":losses.py"],
+    deps = [
+    ],
+)
+
+py_library(
+    name = "metrics",
+    srcs = [":metrics.py"],
+    deps = [
+    ],
+)

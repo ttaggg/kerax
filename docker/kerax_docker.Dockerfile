@@ -11,6 +11,7 @@ RUN apt-get update \
   build-essential \
   bzip2 \
   curl \
+  git \
   wget \
   zip \
   && apt-get clean \
@@ -41,3 +42,6 @@ RUN python3 -m pip --no-cache-dir install --upgrade \
     keras-tqdm==2.0.1 \
     scikit-learn==0.23.1 \
     tensorflow-gpu==1.15.0
+
+RUN pip install --no-cache-dir --no-deps --upgrade \
+  git+https://www.github.com/keras-team/keras-contrib.git

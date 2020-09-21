@@ -39,7 +39,9 @@ training = {
 
 data = {
     'data_path':
-        '<path/to/dir/with/gtFine_trainvaltest_and_leftImg8bit_trainvaltest>',
+        '<path/to/dir/leftImg8bit_trainvaltest>',
+    'labels_path':
+        '<path/to/dir/gtFine_trainvaltest>',
     'task': 'cityscapes_segmentation',
     'n_folds': 20,
     'fold': 0,

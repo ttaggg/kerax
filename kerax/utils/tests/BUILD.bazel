@@ -1,0 +1,44 @@
+package(default_visibility = ["//visibility:public"])
+
+
+py_test(
+    name = "general_utils_test",
+    srcs = [":general_utils_test.py"],
+    data = [
+        "//kerax/testdata:chpt.01.hdf5",
+        "//kerax/testdata:minimal_config.py",
+        "//kerax/testdata:maximal_config.py"
+        ],
+    deps = [
+        "//kerax/utils:general_utils",
+    ],
+)
+
+py_test(
+    name = "image_utils_test",
+    srcs = [":image_utils_test.py"],
+    data = [],
+    deps = [
+        "//kerax/utils:image_utils",
+    ],
+)
+
+py_test(
+    name = "losses_test",
+    srcs = [":losses_test.py"],
+    data = [],
+    deps = [
+        "//kerax/utils:losses",
+    ],
+)
+
+
+py_test(
+    name = "metrics_test",
+    srcs = [":metrics_test.py"],
+    data = [],
+    deps = [
+        "//kerax/utils:metrics",
+    ],
+)
+

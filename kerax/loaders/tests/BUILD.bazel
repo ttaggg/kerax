@@ -1,0 +1,38 @@
+package(default_visibility = ["//visibility:public"])
+
+
+py_test(
+    name = "cityscapes_data_loader_test",
+    srcs = [":cityscapes_data_loader_test.py"],
+    data = [
+        "//kerax/testdata:cityscapes/images"
+        ],
+    deps = [
+        "//kerax/loaders:cityscapes_data_loader",
+    ],
+)
+
+py_test(
+    name = "mauto_data_loader_test",
+    srcs = [":mauto_data_loader_test.py"],
+    data = [
+        "//kerax/testdata:mauto/images",
+        "//kerax/testdata:mauto/train.txt",
+        ],
+    deps = [
+        "//kerax/loaders:mauto_data_loader",
+    ],
+)
+
+
+py_test(
+    name = "severstal_data_loader_test",
+    srcs = [":severstal_data_loader_test.py"],
+    data = [
+        "//kerax/testdata:severstal/images",
+        "//kerax/testdata:severstal/test_set.csv"
+        ],
+    deps = [
+        "//kerax/loaders:severstal_data_loader",
+    ],
+)

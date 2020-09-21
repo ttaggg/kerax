@@ -1,0 +1,36 @@
+package(default_visibility = ["//visibility:public"])
+
+py_library(
+    name = "data_loader",
+    srcs = [":data_loader.py"],
+    deps = [
+        "//kerax/generators:generator",
+    ],
+)
+
+py_library(
+    name = "cityscapes_data_loader",
+    srcs = [":cityscapes_data_loader.py"],
+    deps = [
+        ":data_loader",
+        "//kerax/generators:cityscapes_generator",
+    ],
+)
+
+py_library(
+    name = "mauto_data_loader",
+    srcs = [":mauto_data_loader.py"],
+    deps = [
+        ":data_loader",
+        "//kerax/generators:mauto_generator",
+    ],
+)
+
+py_library(
+    name = "severstal_data_loader",
+    srcs = [":severstal_data_loader.py"],
+    deps = [
+        ":data_loader",
+        "//kerax/generators:severstal_generator"
+    ],
+)

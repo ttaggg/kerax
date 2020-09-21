@@ -1,0 +1,35 @@
+package(default_visibility = ["//visibility:public"])
+
+
+py_library(
+    name = "generator",
+    srcs = [":generator.py"],
+    deps = [
+        "//kerax/utils:image_utils",
+    ],
+)
+
+py_library(
+    name = "cityscapes_generator",
+    srcs = [":cityscapes_generator.py"],
+    deps = [
+        ":generator",
+    ],
+)
+
+py_library(
+    name = "mauto_generator",
+    srcs = [":mauto_generator.py"],
+    deps = [
+        ":generator",
+    ],
+)
+
+py_library(
+    name = "severstal_generator",
+    srcs = [":severstal_generator.py"],
+    deps = [
+        ":generator",
+        "//kerax/utils:image_utils",
+    ],
+)
